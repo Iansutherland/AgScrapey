@@ -1,0 +1,18 @@
+version: "3.9"
+   
+services:
+  pocketbase:
+    image: pocketbase
+    volumes:
+      - totallyMetal:/pb/pb_data
+    ports:
+      - "127.0.0.1:8080:8080"
+  scraper:
+    build:
+      context: .
+      dockerfile: ./scraper/Dockerfile
+    depends_on:
+      - pocketbase
+volumes:
+  totallyMetal:
+    name: 'totallyMetal'

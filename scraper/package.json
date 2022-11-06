@@ -1,0 +1,22 @@
+{
+  "name": "scrapesilver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scrape": "node ./src/index.js",
+    "pocketDocker": "docker run -it --rm -p 127.0.0.1:8080:8080 -v totallyMetal:/pb/pb_data pocketbase",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "cross-fetch": "^3.1.5",
+    "node-cron": "^3.0.2",
+    "pocketbase": "^0.7.4",
+    "sqlite3": "^5.1.2"
+  }
+}
